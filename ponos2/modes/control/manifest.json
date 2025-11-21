@@ -1,0 +1,6 @@
+{
+  "id": "control",
+  "name": "Control Point",
+  "entry": "control.py",
+  "description": "Контрольная точка с таймером удержания"
+}

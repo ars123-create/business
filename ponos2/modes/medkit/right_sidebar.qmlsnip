@@ -1,0 +1,41 @@
+    Column {
+        id: rightSidebar
+        spacing: dp(12)
+        anchors.right: parent.right
+        anchors.rightMargin: dp(32)
+        anchors.verticalCenter: parent.verticalCenter
+        width: dp(240)
+
+        Repeater {
+            model: [
+                { label: "ESP32", val: 22 },
+                { label: "RASPBERRY", val: 65 },
+                { label: "SERVER", val: 45 }
+            ]
+            delegate: Column {
+                spacing: dp(6)
+                Text { text: "00:: " + modelData.label; color: hudMuted; font.family: "Roboto Mono"; font.pixelSize: dp(12); font.letterSpacing: dp(1.0) }
+                Rectangle {
+                    width: rightSidebar.width; height: dp(4); radius: height/2
+                    color: Qt.rgba(0.12,0.18,0.22,0.8)
+                    Rectangle { width: parent.width * (modelData.val/100.0); height: parent.height; radius: parent.radius; color: neonCyan }
+                    Text { anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter; text: modelData.val + "%"; color: hudText; font.family: "Roboto Mono"; font.pixelSize: dp(11) }
+                }
+            }
+        }
+
+        Rectangle {
+            width: rightSidebar.width; height: dp(160); radius: dp(10)
+            color: cBg2; border.color: neonPink; border.width: 1; layer.enabled: true
+
+            Text { text: "ИНФО"; anchors.left: parent.left; anchors.leftMargin: dp(10); anchors.top: parent.top; anchors.topMargin: dp(6); color: neonAmber; font.family: "Roboto Mono"; font.pixelSize: dp(12); font.letterSpacing: dp(1.0) }
+
+            Column {
+                anchors.fill: parent
+                anchors.margins: dp(24)
+                spacing: dp(6)
+                Text { text: "Общий статус: стабильный"; color: hudText; font.family: "Roboto Mono"; font.pixelSize: dp(12) }
+                Text { text: userName ? "USER: " + userName : "USER: не задан"; color: hudMuted; font.family: "Roboto Mono"; font.pixelSize: dp(11) }
+            }
+        }
+    }

@@ -1,0 +1,7 @@
+{
+  "id": "dome",
+  "name": "Dome",
+  "entry": "dome.py",
+  "description": "Режим купола: визуализация состояния (display)",
+  "args": []
+}

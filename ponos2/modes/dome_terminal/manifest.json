@@ -1,0 +1,7 @@
+{
+  "id": "dome_terminal",
+  "name": "Dome Terminal",
+  "entry": "terminal.py",
+  "description": "Терминал бонуса купола: выбор награды, публикация в supertopic",
+  "args": []
+}

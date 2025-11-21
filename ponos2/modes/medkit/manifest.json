@@ -1,0 +1,6 @@
+{
+  "id": "medkit",
+  "name": "Medkit",
+  "entry": "medkit.py",
+  "description": "Аптечка: выдаёт лечение и отправляет MQTT событие heal"
+}

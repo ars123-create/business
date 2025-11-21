@@ -1,0 +1,6 @@
+{
+  "id": "bomb",
+  "name": "Bomb",
+  "entry": "bomb.py",
+  "description": "Режим установки/разминирования бомбы"
+}

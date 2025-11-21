@@ -1,0 +1,6 @@
+{
+  "id": "wait",
+  "name": "Wait",
+  "entry": "wait.py",
+  "description": "Простой экран ожидания"
+}
